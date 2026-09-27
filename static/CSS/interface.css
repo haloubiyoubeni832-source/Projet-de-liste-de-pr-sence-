@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+@media(max-width:768px){
+    nav{
+        flex-direction: column;
+    }
+    #bouton1, #bouton2{
+        width: 100%;
+    }
+}
+
+body{
+    background-color: black;
+    /*background-image: url(../img/WhatsApp\ Image\ 2026-03-18\ at\ 23.04.57.jpeg);*/
+    background-image: url(../img/WhatsApp\ Image\ 2026-03-18\ at\ 23.04.57.jpeg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.div1{
+    display: flex;
+    background-color: #8b8b8b;
+    margin-bottom: 0;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+    margin-right: 0;
+
+}
+
+.div1 a{
+    text-decoration: none;
+
+}
+
+header{
+    width: 1280px;
+    height: 600px;
+    
+}
+
+nav{
+    gap: 80px;
+    background-color: rgba(250, 167, 1, 0.27);
+    display: flex;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 45px;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-family: cursive;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 7px rgba(0, 0, 0, 0.2);
+    padding-right: 25px;
+}
+
+nav a:hover{
+    color: #002633;
+    font-size: 55px;
+}
+
+nav img{
+    display: inline-block;
+    height: 65px;
+    width: auto;
+    margin-right: 30px;
+    object-fit: cover;
+}
+
+nav a img{
+    transition: 0.3s;
+}
+
+nav a img:hover{
+    transform: scale(1.1);
+}
+
+h1{
+    font-family: cursive;
+    font-size: 120px;
+    font-weight: bolder;
+    padding: 80px;
+    margin-left: 100px;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(220, 220, 220);
+    text-shadow: 0 7px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#bouton1{
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #013f10;
+    margin: 20px;
+    margin-right: 100px;
+    font-family: cursive;
+    font-size: 45px;
+    font-weight: bold;
+    border: 2px solid orange;
+}
+
+
+#bouton1 a, #bouton2 a{
+    color: #fff;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0, 0.1);
+
+}
+
+#bouton1:hover{
+    background-color: #0f8629;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+
+}
+
+#bouton2{
+    display: flex;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #012a38;
+    margin: 20px;
+    margin-right: 100px;
+    font-family: cursive;
+    font-size: 45px;
+    font-weight: bold;
+    border: 2px solid orange;
+}
+
+#bouton2:hover{
+    background-color: #1281a6;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+
+}
+

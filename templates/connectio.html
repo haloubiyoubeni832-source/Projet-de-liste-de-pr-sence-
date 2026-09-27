@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestion de presence</title>
+        <style>
+            body{
+                background-color: rgb(116, 39, 63);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+            }
+            section{
+                background-color: whitesmoke;            
+                width: 220px;
+                height: 220px;
+                border-radius: 20px;
+                padding: 30px;
+            }
+            .champ input{
+                width: 100%;
+            }
+            .pupu{
+                padding: 10px;
+                margin-top: 10px;
+                width: 100%;
+                align-items: center;
+                border-radius: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <section>
+        <h1>CONNECTION</h1>
+        <div class="identification">
+            <form method="POST" action="{{ url_for('login') }}">
+                <label for="indicatif">Indicatif :</label>
+                <div class="champ">
+                    <input type="text" name="indicatif" placeholder="entrer l'indicatif"><br>
+                </div>
+                <label for="password">Mot de passe</label>
+                <div class="champ">
+                    <input type="password" name="password" placeholder="entrer le mot de passe">
+                </div>
+                <div>
+                    <button type="submit" class="pupu">se connecter</button>
+                </div>
+            </form>
+        </div>
+        </section>
+    </body>
+</html>

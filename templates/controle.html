@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste</title>
+    <!-- On charge le CSS de controle ou de liste selon la classe -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/controle.css') }}">
+    <style>
+        /* Ajout de styles pour harmoniser si besoin */
+        a { text-decoration: none; color: inherit; }
+    </style>
+</head>
+    <body>
+        <header>
+            <h1>Liste d'appel des étudiants</h1>
+        </header>
+        <form method="POST">
+            {% if erreur %}
+            <p role="alert">{{ erreur }}</p>
+            {% endif %}
+            <label for="matiere">Matière :</label>
+            <input type="text" id="matiere" name="matiere" value="{{ matiere or '' }}" required>
+            <label for="date_seance">Date :</label>
+            <input type="date" id="date_seance" name="date_seance" value="{{ date_seance or date_du_jour }}" required>
+            <table>
+                <thead>
+                    <th>Numéro</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Matricule</th>
+                    <th colspan="2">Statut</th>
+                </thead>
+                <tbody>
+                    {% for etudiant in etudiants %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ etudiant['nom'] }}</td>
+                        <td>{{ etudiant['prenom'] }}</td>
+                        <td>{{ etudiant['matricule'] }}</td>
+                        <td>
+                            <input type="radio" id="present_{{ etudiant['id'] }}" name="statut_{{ etudiant['id'] }}" value="present" checked>
+                            <label for="present_{{ etudiant['id'] }}">Présent</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="absent_{{ etudiant['id'] }}" name="statut_{{ etudiant['id'] }}" value="absent">
+                            <label for="absent_{{ etudiant['id'] }}">Absent</label> 
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <footer>
+                <button type="submit" formaction="{{ url_for('exporter_pdf') }}" formmethod="POST">Exporter en PDF</button>
+                <button type="submit">Enregistrer</button>
+                <button type="reset">Réinitialiser</button>
+                <button type="button"><a href="{{ url_for('statistique') }}">Retour Statistique</a></button>
+            </footer>
+        </form>
+    </body>
+</html>

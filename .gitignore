@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dossiers d'environnement virtuel
+.venv/
+venv/
+env/
+.env
+
+# Données SQLite locales si tu veux éviter qu'elles soient écrasées
+# vraie_base.db

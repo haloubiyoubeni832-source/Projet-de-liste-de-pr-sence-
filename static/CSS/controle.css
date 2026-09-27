@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-style: italic;
+    background-image: url(../img/OIP\ \(2\).webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+}
+
+header{
+    margin: 0;
+    background-color: hsl(38, 100%, 72%);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1{
+    font-family: cursive;
+    font-size: 100px;
+    text-align: center;
+}
+
+span{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.div0{
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(194, 194, 194, 0.791);
+    margin: 10px;
+    margin-right: 255px;
+}
+table {
+    border-collapse: collapse;
+    min-width: 400px;
+    width: auto;
+    box-shadow: 0 5px 50px rgba-(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: 2px solid midnightblue;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 5px 7px rgba(0, 0, 0, 0.1);
+
+}
+thead{
+    background-color: midnightblue;
+    color: white;
+    text-align: left;
+}
+th, td{
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+tbody, tr, th, td{
+    border: 1px solid white;
+}
+tbody tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+tbody tr:nth-child(odd){
+    background-color: rgb(164, 164, 164);
+}
+
+.bouton2{
+    background: #bf0606;
+    display: flex;
+    padding: 5px;
+    font-size: 30px;
+    font-family:cursive;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.bouton2:hover{
+    padding: 10px;
+    font-weight: bold;
+    background: #fd0000;
+}
+
+.bouton1{
+    background: #088f0a;
+    display: flex;
+    padding: 5px;
+    font-size: 30px;
+    font-family:cursive;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.bouton1:hover{
+    padding: 10px;
+    font-weight: bold;
+    background: #00ff04;
+
+}
+.input {
+    transform: scale(2);
+    cursor: pointer;
+    margin: 15px;
+    accent-color: #00dd00;
+}
+
+.input2 {
+    transform: scale(2);
+    cursor: pointer;
+    margin: 15px;
+    accent-color: #dd0000;
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+button{
+    margin: 15px;
+    background-color: #088f0a;
+    font-size: 50px;
+    font-family: cursive;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid midnightblue;
+    cursor: pointer;
+    box-shadow: 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+button:hover{
+    padding: 20px;
+    font-size: 55px;
+    background-color: #59ff5c;
+
+}
